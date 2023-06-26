@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FARMAUNIQ</title>
+  <link rel="stylesheet" href="css/diseño3.css">
+  <link rel="stylesheet" href="Css/fontello.css">
+</head>
+<body>
+  <header>
+    <div class="contenedor">
+      <h1 class="icon-medkit">FarMuniQ</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="pagina2.html">Productos</a></li>
+      <li><a href="modificacion.html">Medicamentos</a></li>
+      <li><a href="modificacionPro.html">Productos variados</a></li>
+      <li><a href="entradaSalida.html">Entradas y Salidas</a></li>
+      <li><a href="Login.html">Cerrar sesión</a></li>
+    </ul>
+  </nav>
+
+  <h2>Registro de Movimientos</h2>
+  
+  <div class="container">
+  <form id="addEntryForm">
+    <label for="entryProduct">Producto:</label>
+    <input type="text" id="entryProduct" name="entryProduct" required>
+    <label for="entryQuantity">Cantidad:</label>
+    <input type="number" id="entryQuantity" name="entryQuantity" min="1" required>
+    <button type="submit">Registrar Entrada</button>
+  </form>
+</div>
+
+<div class="container">
+  
+  <form id="addExitForm">
+    <label for="exitProduct">Producto:</label>
+    <input type="text" id="exitProduct" name="exitProduct" required>
+    <label for="exitQuantity">Cantidad:</label>
+    <input type="number" id="exitQuantity" name="exitQuantity" min="1" required>
+    <button type="submit">Registrar Salida</button>
+  </form>
+</div>
+  
+  
+  <table id="movementTable">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Producto</th>
+        <th>Tipo de Movimiento</th>
+        <th>Cantidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2023-06-13 10:30:00</td>
+        <td>Producto 1</td>
+        <td>Entrada</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>2023-06-12 14:15:00</td>
+        <td>Producto 2</td>
+        <td>Salida</td>
+        <td>5</td>
+      </tr>
+      <!-- Añade más filas según los movimientos realizados -->
+    </tbody>
+  </table>
+  
+  <script>
+    function addMovement(type) {
+      var productInput, quantityInput;
+      
+      if (type === "entry") {
+        productInput = document.getElementById("entryProduct");
+        quantityInput = document.getElementById("entryQuantity");
+      } else {
+        productInput = document.getElementById("exitProduct");
+        quantityInput = document.getElementById("exitQuantity");
+      }
+      
+      var product = productInput.value;
+      var quantity = quantityInput.value;
+      
+      if (product !== "" && quantity !== "") {
+        var movementTable = document.getElementById("movementTable");
+        var newRow = movementTable.insertRow(-1);
+        
+        var dateCell = newRow.insertCell(0);
+        var productCell = newRow.insertCell(1);
+        var type
+        var date = new Date();
+    var dateString = date.toLocaleString();
+    
+    dateCell.innerHTML = dateString;
+    productCell.innerHTML = product;
+    typeCell.innerHTML = type.charAt(0).toUpperCase() + type.slice(1);
+    quantityCell.innerHTML = quantity;
+    
+    productInput.value = "";
+    quantityInput.value = "";
+  }
+}
+
+document.getElementById("addEntryForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  addMovement("entry");
+});
+
+document.getElementById("addExitForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  addMovement("exit");
+});
