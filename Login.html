@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PHARMAUNICA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/Diseño.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url(img/banner.jpg);
+      background-size: cover;
+      background-position: center;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <div class="container">
+      <div class="row full-height justify-content-center">
+        <div class="col-12 text-center align-self-center py-5">
+          <div class="section pb-5 pt-5 pt-sm-2 text-center" id="pan">
+            <h6 class="mb-0 pb-3"><span>Ingresar </span><span>Registrarse</span></h6>
+            <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+            <label for="reg-log" id="pan1"></label>
+            <div class="card-3d-wrap mx-auto">
+              <div class="card-3d-wrapper">
+                <div class="card-front">
+                  <div class="center-wrap">
+                    <div class="section text-center">
+                      <h4 class="mb-4 pb-3">Ingresar</h4>
+                      <div class="form-group">
+                        <input type="email" class="form-style" placeholder="Correo" required>
+                        <i class="input-icon uil uil-at" id="lol"></i>
+                      </div>  
+                      <div class="form-group mt-2">
+                        <input type="password" class="form-style" placeholder="contraseña" required>
+                        <i class="input-icon uil uil-lock-alt" id="lol"></i>
+                      </div>
+                      <a href="Medicamento.html" class="btn mt-4" required>Ingresar</a>
+                      <p class="mb-0 mt-4 text-center"><a href="" class="link">¿Olvidaste tu contraseña?</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="center-wrap">
+                    <div class="section text-center">  
+                      <h4 class="mb-3 pb-3">Registrarse</h4>
+                      
+                        <form action="./bd/registro.php" method="POST">
+
+                          <label for="documento" class="form-label"><i class="fas fa-id-card"></i>Tipo de documento</label>
+                          <select name="t_doc" id="">tipo documento
+                          <option value="C.C">Cedula de Ciudadania</option>
+                          <option value="C.E">Cedula de Extranjeria</option>
+                        </select>
+                      <div class="form-group">
+                        <input type="text" class="form-style" name="Numero de Documento" placeholder="Numero de Documento" required>
+                        <i class="input-icon uil uil-user" id="lol"></i>
+                      </div>  
+                      <div class="form-group">
+                        <input type="text" class="form-style" name="Primer Nombre" placeholder="Primer Nombre" required>
+                        <i class="input-icon uil uil-user" id="lol"></i>
+                      </div>  
+                      <div class="form-group">
+                        <input type="text" class="form-style" name="Segundo Nombre" placeholder="Segundo Nombre" required>
+                        <i class="input-icon uil uil-user" id="lol"></i>
+                      </div>  
+                      <div class="form-group">
+                        <input type="text" class="form-style" name="Primer apellido" placeholder="Primer apellido" required>
+                        <i class="input-icon uil uil-user" id="lol"></i>
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-style" name="Segundo apellido" placeholder="Segundo apellido" required>
+                        <i class="input-icon uil uil-user" id="lol"></i>
+                      </div>  
+                      <div class="form-group mt-2">
+                        <input type="tel" class="form-style" name="Numero Telfonico" placeholder="Numero Telfonico" required>
+                        <i class="input-icon uil uil-phone" id="lol"></i>
+                      </div>  
+                      <div class="form-group mt-2">
+                        <input type="password" class="form-style" name="contraseña" placeholder="contraseña" required>
+                        <i class="input-icon uil uil-lock-alt" id="lol"></i>
+                      </div>
+                      <div class="form-group">
+                        <label for="documento" class="form-label"><i class="fas fa-id-card" >Pregunta de seguridad</i></label>
+                        <i class="input-icon uil uil-user"></i>
+                        <select  name="ps" id="">Pregunta seguridad
+                          <option value="11">¿Cual es Nombre de tu padre?</option>
+                          <option value="12">¿Cual es Nombre de tu madre?</option>
+                          <option value="14">¿Cual es tu Color Favorito'</option>
+                        </select>
+                        <input type="text" name="Respuesta" id="">
+                      </div> 
+                      <button type="button" class="btn btn-primary link"> <i class="fas fa-arrow-cicle-left"></i>Registrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  </div>
+</body>
+</html>
