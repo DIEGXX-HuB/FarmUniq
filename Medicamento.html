@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Productos</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: 'Times New Roman', Times, serif, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #e6f0ff; /* Color de fondo azul claro */
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    /* Estilos del contenedor principal */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Alineación a la izquierda */
+      margin-left: 20px; /* Margen izquierdo para los botones */
+      margin-top: 30px; /* Margen superior */
+    }
+
+    /* Estilos de la imagen */
+    .centered-image {
+      display: block;
+      margin: 0 auto;
+      max-width: 400px; /* Ajusta el tamaño máximo de la imagen */
+      margin-top: -170px;
+    }
+
+    /* Estilos de los botones */
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4075a0;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      border-radius: 20px; /* Agregamos el borde redondeado */
+    }
+
+    .button:hover {
+      background-color: #10416f; /* Cambiamos el color de fondo al hacer hover */
+    }
+  </style>
+  <script>
+    function cerrarSesion() {
+      // Aquí puedes agregar cualquier lógica necesaria para cerrar la sesión
+      // Redirigir a la página de inicio de sesión o realizar otras acciones
+      window.location.href = "Cerrar sesion.html";
+    }
+
+    function irAMedicamentos() {
+      // Redirigir a la página de medicamentos
+      window.location.href = "Medicamentos.html";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Productos</h1>
+    <button onclick="cerrarSesion()" class="button">Crear Medicamento</button>
+    <button onclick="irAMedicamentos()" class="button">Modificar Medicamento</button>
+    <button onclick="irAMedicamentos()" class="button">Ingreso Medicamento</button>
+    <button onclick="irAMedicamentos()" class="button">Salida Medicamento</button>
+  </div>
+
+  <img src="img/Medicamentos.jpg" class="centered-image" alt="imagen">
+</body>
+</html>
+
+
+
+
