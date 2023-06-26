@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FARMAUNIQ</title>
+  <link rel="stylesheet" href="css/diseño2.css">
+  <link rel="stylesheet" href="Css/fontello.css">
+</head>
+<body>
+  <header>
+    <div class="contenedor">
+      <h1 class="icon-medkit">FarMuniQ</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="pagina2.html">Productos</a></li>
+      <li><a href="modificacion.html">Medicamentos</a></li>
+      <li><a href="modificacionPro.html">Productos variados</a></li>
+      <li><a href="entradaSalida.html">Entradas y Salidas</a></li>
+      <li><a href="Index.html">Cerrar sesión</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+  <form id="addMedicineForm">
+    <label for="medicineName">Nombre del Medicamento:</label>
+    <input type="text" id="medicineName" name="medicineName" required>
+    <label for="medicineQuantity">Cantidad:</label>
+    <input type="number" id="medicineQuantity" name="medicineQuantity" min="1" required>
+    <button type="submit">Agregar Medicamento</button>
+  </form>
+</div>
+  
+  <table id="inventoryTable">
+    <thead>
+      <tr>
+        <th>Medicamento</th>
+        <th>Cantidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Acetaminofem</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>Ibuprofeno</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Amoxicilina</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>etanol</td>
+        <td>15</td>
+      </tr>
+      <tr>
+        <td>acido clavunalico</td>
+        <td>20</td>
+      </tr>
+      <tr>
+        <td>diclofenaco sodico</td>
+        <td>12</td>
+      </tr>
+      <!-- Añade más filas según tus medicamentos -->
+    </tbody>
+  </table>
+  
+  <script>
+    document.getElementById("addMedicineForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      var medicineNameInput = document.getElementById("medicineName");
+      var medicineQuantityInput = document.getElementById("medicineQuantity");
+      
+      var medicineName = medicineNameInput.value;
+      var medicineQuantity = medicineQuantityInput.value;
+      
+      if (medicineName !== "" && medicineQuantity !== "") {
+        var inventoryTable = document.getElementById("inventoryTable");
+        var newRow = inventoryTable.insertRow(-1);
+        var nameCell = newRow.insertCell(0);
+        var quantityCell = newRow.insertCell(1);
+        
+        nameCell.innerHTML = medicineName;
+        quantityCell.innerHTML = medicineQuantity;
+        
+        medicineNameInput.value = "";
+        medicineQuantityInput.value = "";
+      }
+    });
+  </script>
+</body>
+</html>

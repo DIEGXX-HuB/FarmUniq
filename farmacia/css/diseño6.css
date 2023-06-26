@@ -1,0 +1,53 @@
+
+/* Estilos generales */
+body {
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e6f0ff; /* Color de fondo azul claro */
+}
+
+.container h1 {
+  color: rgb(0, 0, 0);
+}
+
+/* Estilos del contenedor principal */
+.container {
+  flex-direction: column;
+  width: 400px; /* Ajusta el ancho según tus necesidades */
+  margin-top: -200px;
+  display: flex;
+  justify-content: center; 
+}
+
+/* Estilos de la imagen */
+.centered-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 400px; /* Ajusta el tamaño máximo de la imagen */
+  margin-top: 100px;
+
+}
+
+/* Estilos de los botones */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1d5b8d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border-radius: 20px; /* Borde redondeado */
+}
+.button a{
+  font-size: 20px; /* Ajusta el tamaño de fuente según tus necesidades */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(253, 253, 253);
+}
+
+.button:hover {
+  background-color: #10416f; /* Cambiamos el color de fondo al hacer hover */
+}
